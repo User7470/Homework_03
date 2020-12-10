@@ -25,7 +25,7 @@ function decideCharset() {
   var symbConf = confirm("Would you like to include symbols in your password?");
   if (numConf === false && upperConf === false && lowerConf === false && symbConf === false) {
     alert("Please choose at least one character type!");
-    decideCharset();
+    generatePassword();
   }
 
   var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]

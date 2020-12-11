@@ -12,3 +12,7 @@ Depending on what is selected, the password will then be generated according to 
 
 If the user should wish to create a new password, the button may be pressed again to repeat the process and replace the displayed password
 ------------------------------------------------------------------------
+# Known Unresolved Issues
+I had yet to implement a way to check for if a given password contains at least one of each specified character after generation. While often unlikely, this is still a potential issue with the password generation.
+
+Code is functional yet likely lacks many forms of optimization to lower the amount of code needed, I was unaware of better methods that could be used for this but pretty certain it would have been possible, some parts seemed quite excessive.

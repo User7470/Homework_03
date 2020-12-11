@@ -15,7 +15,7 @@ generateBtn.addEventListener("click", writePassword);
 
 //Function for choosing which set of characters to use based on the confirms
 function decideCharset() {
-  //Horribly inefficient method, but all characters were put into their own arrays which will be combined based on the confirmations given by the user on their desired characters. Backslash didn't want to cooperate with this method and is not present. Space was also not included in this as I did not want it to end up at the start or end of a password (and also I don't believe many passwords actually want any spaces). The confirms also ended up moved into here whilst I was trying to find the source of a completely unrelated error but whatever.
+  // Backslash didn't want to cooperate with this method without causing issues and is not present. Space was also not included in this as I did not want it to end up at the start or end of a password (and also I don't believe many passwords actually want any spaces). The confirms also ended up moved into here whilst I was trying to find the source of a completely unrelated error but whatever.
   var numConf = confirm("Would you like to include numbers in your password?");
 
   var upperConf = confirm("Would you like to include uppercase letters in your password?");
@@ -27,12 +27,12 @@ function decideCharset() {
     alert("Please choose at least one character type!");
     generatePassword();
   }
-
+//Declaring arrays used in generation
   var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
   var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var symbols = ["!", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
-  
+  //likely a better method of doing this I assume, basically all arrays were combined based on the various possible confirms to then be used in generation.
   var numUpper = numbers.concat(upperCase);
   var numLower = numbers.concat(lowerCase);
   var numSymb = numbers.concat(symbols);
